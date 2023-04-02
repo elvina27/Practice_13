@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         StatisticsBtn = findViewById(R.id.btnStatistics)
         RiddleBtn = findViewById(R.id.btnRiddle)
         AnswerBtn = findViewById(R.id.btnAnswer)
+
     }
 
     lateinit var RiddleTxt: TextView

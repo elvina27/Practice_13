@@ -15,15 +15,24 @@ class ThirdActivity : AppCompatActivity() {
         RightTxt = findViewById(R.id.txtRight)
         WrongTxt = findViewById(R.id.txtWrong)
         BackBtn = findViewById(R.id.btnBack)
+        ExitBtn = findViewById(R.id.btnExit)
 
         RightTxt.text = intent.getStringExtra("right")
         WrongTxt.text = intent.getStringExtra("wrong")
+        ExitBtn.setOnClickListener{
+            finishAffinity()
+        }
     }
     lateinit var RightTxt: TextView
     lateinit var WrongTxt: TextView
     lateinit var BackBtn: Button
+    lateinit var ExitBtn: Button
 
     fun btnBackClick(){
-        val intent = Intent(this, MainActivity::class.java)
+        System.exit(0)
+    }
+
+    fun btnExitClick(){
+        finishAffinity()
     }
 }
